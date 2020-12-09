@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "666657155052",
+    "project_id": "ftechnology-b2469",
+    "storage_bucket": "ftechnology-b2469.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666657155052:android:1bc1e0a9730e59de8ac2c9",
+        "android_client_info": {
+          "package_name": "com.example.ftechnology"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "666657155052-aulpoonoffd7l63pbpae0psqkds5ik9j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBATe0i9I0dFqqsiZh-AdRSMd6H9ieXqS8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666657155052-aulpoonoffd7l63pbpae0psqkds5ik9j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
