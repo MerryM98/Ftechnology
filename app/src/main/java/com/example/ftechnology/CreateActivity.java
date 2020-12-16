@@ -6,11 +6,9 @@ import com.example.ftechnology.models.TechnologyModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.firestore.DocumentReference;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
@@ -18,9 +16,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 public class CreateActivity extends BaseActivity {
 
-    FloatingActionButton fab_create_save, fab_create_clear, fab_create_back;
+    FloatingActionButton fab_create_save, fab_create_clear, fab_create_back,fab_create;
     ImageView iv_created_img;
     TextView tv_create_clic_img;
     EditText et_create_type, et_create_example, et_create_description;
@@ -35,6 +35,8 @@ public class CreateActivity extends BaseActivity {
         super.init();
         init();
 
+
+
         fab_create_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,6 +50,14 @@ public class CreateActivity extends BaseActivity {
                 clear();
             }
         });
+
+        fab_create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToEdit(model);
+            }
+        });
+
 
         fab_create_save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,7 +100,7 @@ public class CreateActivity extends BaseActivity {
                                 }
 
                             }else {
-                                makeSimpleAlertDialog("Error", task.getException().getMessage());
+                                makeSimpleAlertDialog("Error", Objects.requireNonNull(task.getException()).getMessage());
                             }
                         }
                     });
@@ -103,6 +113,7 @@ public class CreateActivity extends BaseActivity {
         fab_create_save = findViewById(R.id.fab_create_save);
         fab_create_clear = findViewById(R.id.fab_create_clear);
         fab_create_back = findViewById(R.id.fab_create_back);
+        fab_create =findViewById(R.id. fab_create);
         iv_created_img = findViewById(R.id.iv_created_img);
         tv_create_clic_img = findViewById(R.id.tv_create_clic_img);
         et_create_type = findViewById(R.id.et_create_type);

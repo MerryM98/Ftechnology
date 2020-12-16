@@ -78,8 +78,8 @@ public class BaseActivity<TechnologyAdapter> extends AppCompatActivity {
         startActivity(intent);
     }
 
-    protected void goToEdit(){
-        Intent intent = new Intent(this, BaseActivity.class);
+    protected void goToEdit(TechnologyModel model){
+        Intent intent = new Intent(this, ActualizarActivity.class);
         startActivity(intent);
     }
 

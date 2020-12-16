@@ -1,10 +1,12 @@
 package com.example.ftechnology.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.ftechnology.R;
@@ -13,14 +15,16 @@ import com.example.ftechnology.models.TechnologyModel;
 import java.util.ArrayList;
 
 public class technologyAdapter extends BaseAdapter {
-
+     Activity  activity;
     private Context context;
     private ArrayList<TechnologyModel> modelArrayList;
 
-    public technologyAdapter(Context context, ArrayList<TechnologyModel> modelArrayList) {
+    public technologyAdapter(Context context, ArrayList<TechnologyModel> modelArrayList, Activity activity) {
         this.context = context;
         this.modelArrayList = modelArrayList;
+        this.activity= activity;
     }
+
 
     @Override
     public int getCount() {
@@ -45,6 +49,7 @@ public class technologyAdapter extends BaseAdapter {
         }
         TextView tv_techology_type = view.findViewById(R.id.tv_techology_type);
         TextView tv_techology_description = view.findViewById(R.id.tv_techology_description);
+
 
         tv_techology_type.setText(getItem(position).getType());
         tv_techology_description.setText(getItem(position).getDescription());

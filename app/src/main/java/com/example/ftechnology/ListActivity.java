@@ -94,7 +94,7 @@ public class ListActivity extends BaseActivity {
     }
 
     protected void paintTechnology(ArrayList<TechnologyModel> modelArrayList){
-        adapter = new technologyAdapter(this, modelArrayList);
+        adapter = new technologyAdapter(this, modelArrayList, this );
         lv_list_technology.setAdapter((ListAdapter) adapter);
     }
 

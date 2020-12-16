@@ -42,13 +42,26 @@
         app:maxImageSize="35dp"
         app:srcCompat="@drawable/ic_close_black_18dp" />
 
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_create_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
         android:layout_margin="@dimen/fab_margin"
         app:maxImageSize="35dp"
         app:srcCompat="@drawable/ic_keyboard_arrow_left_black_18dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="@dimen/fab_margin"
+        app:maxImageSize="55dp"
+        app:srcCompat="@drawable/ic_close_black_18dp" />
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
